@@ -1,16 +1,3 @@
-/*!
-=========================================================
-* JohnDoe Landing page
-=========================================================
-
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 
 // smooth scroll
 $(document).ready(function(){
@@ -31,7 +18,7 @@ $(document).ready(function(){
     });
 });
 
-// protfolio filters
+// Filtro de portafolio
 $(window).on("load", function() {
     var t = $(".portfolio-container");
     t.isotope({
@@ -57,7 +44,7 @@ $(window).on("load", function() {
 
 
 // google maps
-function initMap() {
+/*function initMap() {
 // Styles a map in night mode.
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 40.674, lng: -73.945},
@@ -148,3 +135,4 @@ function initMap() {
       ]
     });
 }
+*/

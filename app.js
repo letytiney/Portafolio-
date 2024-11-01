@@ -1,61 +1,93 @@
 const express = require('express')
 const hbs = require('hbs')
-const path = require('path');
+//const path = require('path');
 require('dotenv').config();
 
 const app = express()
 const port = process.env.PORT
 
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+//app.set('views', path.join(__dirname, 'views'));
 
+hbs.registerPartials(__dirname + '/views/partials');
 
-hbs.registerPartials(__dirname + '/views/partials')
-
-//app.use(express.static('public'));
+app.use(express.static('public_html'));
 // Usa la ruta absoluta para mayor seguridad
-app.use(express.static(path.join(__dirname, 'public_html')));
+//app.use(express.static(path.join(__dirname, 'public_html')));
 //app.use(express.static('public_html'))
 
 app.get('/', (req, res)=>{
     res.render('home', {
         nombre: 'Sandra Tiney S. ',
-        titulo: 'Portafolio | Leticia Tiney S.',
+        titulo: 'Portafolio | Home',
         profesion: 'Ingenieria en Sistemas',
         ocupacion: 'Estudiante de Ingenieria'
     })
 })
-app.get('/sobremi', (req, res) => {
-    res.render('sobremi', {
+app.get('/habilidades', (req, res) => {
+    res.render('habilidades', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
         titulo: 'Sobre mi | Leticia Tiney S.'
     });
 });
 
 app.get('/cv', (req, res) => {
     res.render('cv', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
         titulo: 'Hoja de vida'
     });
 });
 
 app.get('/lenguajes', (req, res) => {
     res.render('lenguajes', {
-        titulo: 'Lenguaje que domino'
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
+        titulo: 'Proyecto 1'
     });
 });
 
 app.get('/contacto', (req, res) => {
     res.render('contacto', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
         titulo: 'Contacto'
     });
 });
 
+app.get('/calculadoraMRU', (req, res) => {
+    res.render('calculadoraMRU', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
+        titulo: 'Proyecto 1'
+    });
+});
+app.get('/restauranteML', (req, res) => {
+    res.render('restauranteML', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
+        titulo: 'Proyecto 2'
+    });
+});
+app.get('/paginaWebRailway', (req, res) => {
+    res.render('paginaWebRailway', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
+        titulo: 'Proyecto 3'
+    });
+});
 
-
-
-
+app.get('/ecommerce', (req, res) => {
+    res.render('ecommerce', {
+        nombre: 'Sandra Tiney S. ',
+        profesion: 'Ingenieria en Sistemas',
+        titulo: 'Proyecto 3'
+    });
+});
 
 app.get('*', (req, res)=>{
-    res.sendFile(__dirname + '/public/404.html')
+    res.render('404')
 })
 
 app.listen(port, () => {

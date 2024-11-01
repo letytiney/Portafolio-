@@ -1,17 +1,5 @@
 @charset "UTF-8";
-/*!
-=========================================================
-* JohnDoe Landing page
-=========================================================
 
-* Copyright: 2019 DevCRUD (https://devcrud.com)
-* Licensed: (https://devcrud.com/licenses)
-* Coded by www.devcrud.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap");
 :root {
   --blue: #79A9F5;
@@ -57,7 +45,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -438,8 +426,9 @@ hr {
 
 small,
 .small {
-  font-size: 80%;
-  font-weight: 400;
+  font-size: 80%; 
+  font-weight: 400; /*Negria*/
+  text-align: center; /*Centrado*/
 }
 
 mark,
@@ -588,7 +577,7 @@ pre code {
 }
 
 .container-fluid {
-  width: 100%;
+  width: 80%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -11309,7 +11298,7 @@ p {
 
 .blog-card .content-holder .post-details i {
   display: inline-block;
-  width: 15px;
+  width: 10px;
 }
 
 .blog-card .content-holder .post-details a {
@@ -11600,7 +11589,7 @@ pre .code {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 30px 0;
 }
 
 .section.bg-custom-gray {
@@ -11608,11 +11597,11 @@ pre .code {
 }
 
 .about-section {
-  border-bottom: 1px solid #dee2e6;
+  /*border-bottom: 2px solid #dee2e6;*/
 }
 
 .about-section .about-card {
-  padding: 60px;
+  padding: 30px;
   border-right: 1px solid #dee2e6;
 }
 
@@ -11681,4 +11670,183 @@ pre .code {
   background: #F85C70;
   display: block;
   margin-top: 10px;
+}
+ol {
+  list-style-type: none; 
+  padding: 0;         
+}
+
+ol li {
+  position: relative; 
+  padding-left: 20px; 
+}
+
+ol li::before {
+  content: '★'; 
+  position: absolute;
+  left: 0; 
+  color: #F85C70; 
+}
+
+ul {
+  list-style-type: none; /* Elimina las viñetas */
+  padding: 0;           /* Elimina el padding por defecto */
+  margin: 0;            /* Elimina el margen por defecto */
+}
+.nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  position: relative; /* Necesario para el menú desplegable */
+  display: inline-block; /* Muestra los elementos en línea */
+  margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #F85C70; /* Color del enlace */
+  padding: 10px; /* Espaciado interno */
+}
+
+.nav-link:hover {
+  color: #f51330; /* Color al pasar el mouse */
+}
+
+.dropdown {
+  display: none; /* Oculta el menú desplegable por defecto */
+  position: absolute; /* Posiciona el menú desplegable */
+  top: 100%; /* Coloca el menú debajo del elemento padre */
+  left: 0;
+  background-color: white; /* Color de fondo del menú desplegable */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.nav-item:hover .dropdown {
+  display: block; /* Muestra el menú desplegable al pasar el mouse sobre el elemento padre */
+}
+
+.dropdown-item {
+  text-decoration: none;
+  color: #212529; /* Color del enlace en el menú desplegable */
+  padding: 20px; /* Espaciado interno */
+  display: block; /* Hace que cada ítem ocupe toda la línea */
+}
+
+.dropdown-item:hover {
+  background-color: #F85C70; /* Color de fondo al pasar el mouse */
+}
+.fa-solid{
+  color:#F85C70;
+}
+.skills{
+  color:#F85C70;
+}
+
+     .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .image-item {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 20px; /* Espacio interno para los logos */
+            background-color: #f5f5f5; /* Fondo sutil para cada logo */
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .image-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 15px;
+            }
+            .image-item {
+              height: 150px; /* Altura más pequeña en móvil */
+          }
+        }
+
+        
+     .image-grid-proyecto {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+      gap: 20px;
+      padding: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .image-item-proyecto {
+      width: 100%;
+      height: 300px;
+      object-fit: contain;
+      padding: 1px; /* Espacio interno para los logos */
+      background-color: #f5f5f5; /* Fondo sutil para cada logo */
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+  }
+
+  .image-item-proyecto:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+      .image-grid-proyecto {
+          grid-template-columns: 1fr;
+          gap: 15px;
+          padding: 15px;
+      }
+      .image-item-proyecto {
+        height: 275px; /* Altura más pequeña en móvil */
+    }
+  }
+/*  width="640" height="360"*/
+  .medida-img{
+    height: 200px !important;
+  }
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      margin: 0 auto;
+  }
+
+  iframe {
+    width: 100%;
+    height: 350px; 
+}
+@media (max-width: 768px) {
+  .video-container {
+    height: 200px; 
+  }
+  iframe {
+      height: 80vh;
+  }
+}
+.linkRepo{
+color: black !important;
+border-bottom: 1px solid #000; 
+padding-bottom: 1px;
+font-size: 20px;
+
 }
