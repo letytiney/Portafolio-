@@ -11850,3 +11850,34 @@ padding-bottom: 1px;
 font-size: 20px;
 
 }
+
+/*Error 404*/
+.container404 {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+.h1404 {
+  color: #e74c3c; 
+  font-size: 2.5em; 
+  margin-bottom: 20px;
+}
+.p404 {
+  color: #555; 
+  font-size: 1.2em; 
+}
+.a404 {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color:  #e74c3c; 
+  color: #fff; 
+  text-decoration: none; 
+  border-radius: 5px; 
+}
+.a404:hover {
+  background-color:  #cb4536; 
+  color: #fff;
+}
