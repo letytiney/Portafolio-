@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,136 +9,384 @@
     <title>{{titulo}}</title>
     <link rel="stylesheet" href="/assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="/assets/css/estilos.css">
+
+    <style>
+        /* Estilos para el texto de introducción */
+        #portfolio h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem !important;
+        }
+
+        #portfolio p.intro-text {
+            font-size: 1.15rem;
+            color: #6c757d;
+            margin-bottom: 3rem !important;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Estilos para los filtros (opcional, si quieres un fondo más destacado) */
+        .filters a.active {
+            border-bottom: 2px solid #dc3545;
+            /* Línea de color para el filtro activo */
+        }
+
+        /* Efecto sutil al pasar el mouse por los items del portafolio */
+        .portfolio-item:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
+
 <body>
-        
-        {{> header}}
-        
-        {{> navbar }}
-   
+    {{> header}}
+    {{> navbar }}
+
     <div class="container-fluid">
-    <section class="section bg-custom-gray" id="portfolio">
-        <div class="container">
-            <h1 class="mb-5"><span class="text-danger">Conocimiento </span>en lenguajes de programación</h1>
-            <p class="mt-20">Estos son los lenguajes de programación que he tenido experiencia en realizar un proyecto y en el rango de conocimiento en la que se encuentran</p>
-            <div class="portfolio">
-                <div class="filters">
-                    <a href="#" data-filter=".backend" class="active">
-                        Backend
-                    </a>
-                    <a href="#" data-filter=".frontend">
-                        Fontend
-                    </a>
-                    <a href="#" data-filter=".principiante">
-                        Principiante
-                    </a>
-                    <a href="#" data-filter=".dominado">
-                        Dominados
-                    </a>
-                </div>
-                <div class="portfolio-container"> 
-                    <div class="col-md-6 col-lg-4  principiante backend">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/node.png" class="img-fluid medida-img" alt="Logo de node.js">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/node.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Node.js</h6>
-                                    <p class="subtitle">Usando Express</p>
-                                </div>
-                            </div>   
-                        </div>             
+        <section class="section bg-custom-gray text-center" id="portfolio">
+            <div class="container">
+                <br>
+                <h1 class="mb-2"><span class="text-danger">Mi Stack </span>de tecnología</h1>
+                <p class="intro-text mt-30">
+                    Lenguajes de programación, frameworks, librerias, SGBD y otras herramientras para el desarrollo
+                    clasificado por categorias
+                </p>
+
+                <div class="portfolio">
+                    <div class="filters">
+                        <a href="#" data-filter=".backend" class="active">
+                            <i class="ti-panel pr-1"></i> Backend
+                        </a>
+                        <a href="#" data-filter=".database">
+                            <i class="ti-server pr-1"></i> Bases de Datos
+                        </a>
+                        <a href="#" data-filter=".frontend">
+                            <i class="ti-layout-media-left-alt pr-1"></i> Frontend
+                        </a>
+                        <a href="#" data-filter=".other-components"> <i class="ti-layers pr-1"></i> Otros Componentes
+                        </a>
+                        <a href="#" data-filter=".other-tech"> <i class="ti-settings pr-1"></i> Otras Tecnologías
+                        </a>
                     </div>
-                    <div class="col-md-6 col-lg-4  principiante backend ">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/springboot.png" class="img-fluid medida-img" alt="Logotipo de SpringBoot">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/springboot.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">SpingBoot</h6>
-                                    <p class="subtitle"></p>
+
+                    <div class="portfolio-container">
+
+                        <div class="col-md-6 col-lg-4 other-components">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/jwt.png" class="img-fluid medida-img" alt="Logotipo de JWT">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/jwt.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">JWT</h6>
+                                        <p class="subtitle">JSON Web Token</p>
+                                    </div>
                                 </div>
-                            </div> 
-                        </div>                         
-                    </div>
-                        <div class="col-md-6 col-lg-4 backend principiante">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/c++.png" class="img-fluid " alt="Logotipo de C++">                        
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/c++.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">C++</h6>
-                                    <p class="subtitle"></p>
-                                </div>
-                            </div> 
+                            </div>
                         </div>
-                    </div> 
-                    <div class="col-md-6 col-lg-4 frontend dominado">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/html.png" class="img-fluid medida-img" alt="Logotipo de HTML">                         
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/html.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">HTML5</h6>
-                                    <p class="subtitle"></p>
-                                </div>
-                            </div>    
-                        </div>              
-                    </div> 
-                    <div class="col-md-6 col-lg-4 frontend dominado">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/css.png" class="img-fluid medida-img" alt="Logotipo de CSS">
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/css.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">CSS3</h6>
-                                    <p class="subtitle"></p>
+                        <div class="col-md-6 col-lg-4 other-components">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/awscognito.png" class="img-fluid medida-img"
+                                    alt="Logotipo de AWS Cognito">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/awscognito.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">AWS Cognito</h6>
+                                        <p class="subtitle">Autenticación y autorización</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>                                                     
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/git.png" class="img-fluid medida-img" alt="Logotipo de Git">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/git.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Git</h6>
+                                        <p class="subtitle">Control de Versiones</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/figma.png" class="img-fluid medida-img" alt="Logotipo de Figma">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/figma.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Figma</h6>
+                                        <p class="subtitle">Diseño UI/UX</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/jira.png" class="img-fluid medida-img" alt="Logotipo de Jira">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/jira.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Jira</h6>
+                                        <p class="subtitle">Software de gestión de proyectos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/postman.png" class="img-fluid medida-img"
+                                    alt="Logotipo de Postman">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/postman.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Postman</h6>
+                                        <p class="subtitle">Pruebas de API</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/insomnia.png" class="img-fluid medida-img"
+                                    alt="Logotipo de Insomnia">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/insomnia.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Insomnia</h6>
+                                        <p class="subtitle">Pruebas de API</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 other-tech">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/vite.jpg" class="img-fluid medida-img" alt="Logotipo de Vite">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/vite.jpg"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Vite</h6>
+                                        <p class="subtitle">Herramienta de compilación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-4 database">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/sqlserver.png" class="img-fluid medida-img"
+                                    alt="Logotipo de SQL Server">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/sqlserver.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">SQL Server</h6>
+                                        <p class="subtitle">T-SQL y Administración</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 database">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/mysql.png" class="img-fluid medida-img" alt="Logotipo de MySQL">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/mysql.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">MySQL</h6>
+                                        <p class="subtitle">Consultas y Diseño de Esquemas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 database">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/postgresql.png" class="img-fluid medida-img"
+                                    alt="Logotipo de PostgreSQL">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/postgresql.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">PostgreSQL</h6>
+                                        <p class="subtitle">Funciones y PL/pgSQL</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 database">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/mongodb.png" class="img-fluid medida-img"
+                                    alt="Logotipo de MongoDB">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/mongodb.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">MongoDB</h6>
+                                        <p class="subtitle">Consultas y Diseño de Esquemas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6 col-lg-4 backend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/node.png" class="img-fluid medida-img" alt="Logo de Node.js">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/node.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Node.js</h6>
+                                        <p class="subtitle">Express</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 backend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/springboot.png" class="img-fluid medida-img"
+                                    alt="Logotipo de SpringBoot">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/springboot.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">SpringBoot (Java)</h6>
+                                        <p class="subtitle">REST APIs</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 backend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/docker.png" class="img-fluid medida-img" alt="Logotipo de Docker">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="#"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Docker</h6>
+                                        <p class="subtitle">Contenedores y DevOps</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 backend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/net.png" class="img-fluid medida-img" alt="Logotipo de .NET">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/net.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">.NET</h6>
+                                        <p class="subtitle">.NET Framework .NET 8 o .NET 9</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 backend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/c++.png" class="img-fluid medida-img" alt="Logotipo de C++">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/c++.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">C++</h6>
+                                        <p class="subtitle">Fundamentos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/html.png" class="img-fluid medida-img" alt="Logotipo de HTML">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/html.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">HTML5</h6>
+                                        <p class="subtitle">Estructura Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/css.png" class="img-fluid medida-img" alt="Logotipo de CSS">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/css.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">CSS3</h6>
+                                        <p class="subtitle">Diseño Responsivo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/Js.png" class="img-fluid medida-img" alt="Logotipo de JavaScript">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/Js.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">JavaScript</h6>
+                                        <p class="subtitle">DOM y lógica</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/react.png" class="img-fluid medida-img" alt="Logotipo de React">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/react.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">React</h6>
+                                        <p class="subtitle">SPA y Hooks</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/Bootstrap.png" class="img-fluid medida-img"
+                                    alt="Logotipo de Bootstrap">
+                                <div class="content-holder">
+                                    <a class="img-popup" href="assets/imgs/Bootstrap.png"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Bootstrap</h6>
+                                        <p class="subtitle">Framework CSS</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-4 frontend">
+                            <div class="portfolio-item">
+                                <img src="assets/imgs/chakra.jpg" class="img-fluid medida-img"
+                                    alt="Logotipo de Chakra UI">          
+                                <div class="content-holder">
+                                    <a class="img-popup" href="#"></a>
+                                    <div class="text-holder">
+                                        <h6 class="title">Chakra UI</h6>
+                                        <p class="subtitle">Librería de Componentes React</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    
-                    <div class="col-md-6 col-lg-4 frontend dominado"> 
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/Js.png" class="img-fluid medida-img" alt="Logotipo de JavaScript">                               
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/Js.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">JavaScript</h6>
-                                    <p class="subtitle"></p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                    <div class="col-md-6 col-lg-4 frontend dominado">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/react.png" class="img-fluid medida-img" alt="Logotipo de react">  
-                           <div class="content-holder">
-                                <a class="img-popup " href="assets/imgs/react.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">React</h6>
-                                    <p class="subtitle"></p>
-                                </div>
-                            </div>
-                        </div>                                                     
-                    </div>
-                    <div class="col-md-6 col-lg-4 frontend dominado">
-                        <div class="portfolio-item">
-                            <img src="assets/imgs/Bootstrap.png" class="img-fluid medida-img" alt="Logotipo de Boostrap">       
-                            <div class="content-holder">
-                                <a class="img-popup" href="assets/imgs/Bootstrap.png"></a>
-                                <div class="text-holder">
-                                    <h6 class="title">Bootstrap</h6>
-                                    <p class="subtitle"></p>
-                                </div>
-                            </div>
-                        </div>                                                       
-                    </div> 
-                </div> 
-            </div>  
-        </div>            
-    </section>
+                </div>
+            </div>
+        </section>
     </div>
+
     {{> footer}}
 </body>
+
 </html>

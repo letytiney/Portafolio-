@@ -14,7 +14,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static('public_html'));
 
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     res.render('home', {
         nombre: 'Sandra Tiney S. ',
         titulo: 'Portafolio | Home',
@@ -54,25 +54,11 @@ app.get('/contacto', (req, res) => {
     });
 });
 
-app.get('/calculadoraMRU', (req, res) => {
-    res.render('calculadoraMRU', {
+app.get('/lista_proyectos', (req, res) => {
+    res.render('lista_proyectos', {
         nombre: 'Sandra Tiney S. ',
         profesion: 'Ingenieria en Sistemas',
-        titulo: 'Proyecto 1'
-    });
-});
-app.get('/restauranteML', (req, res) => {
-    res.render('restauranteML', {
-        nombre: 'Sandra Tiney S. ',
-        profesion: 'Ingenieria en Sistemas',
-        titulo: 'Proyecto 2'
-    });
-});
-app.get('/paginaWebRailway', (req, res) => {
-    res.render('paginaWebRailway', {
-        nombre: 'Sandra Tiney S. ',
-        profesion: 'Ingenieria en Sistemas',
-        titulo: 'Proyecto 3'
+        titulo: 'Lista de Proyectos'
     });
 });
 
@@ -84,7 +70,7 @@ app.get('/ecommerce', (req, res) => {
     });
 });
 
-app.get('*', (req, res)=>{
+app.get('*', (req, res) => {
     res.render('404')
 })
 
