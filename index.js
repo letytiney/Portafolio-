@@ -77,5 +77,5 @@ app.get('*', (req, res) => {
 })
 console.log('--- 3. ANTES DE APP.LISTEN ---'); // C
 app.listen(port, () => {
-    console.log(`Ejemplo escuchando en http://localhost:${port}`); // D
+    console.log(`SERVIDOR ACTIVO en el puerto ${port}`);
 })
