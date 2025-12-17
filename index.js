@@ -1,8 +1,10 @@
+console.log('--- 1. INICIANDO APP ---'); // A
 const express = require('express')
 const hbs = require('hbs')
 
 require('dotenv').config();
 
+console.log('--- 2. DESPUÉS DE REQUIRE ---'); // B
 const app = express()
 const port = process.env.PORT || 3000;
 
@@ -73,7 +75,7 @@ app.get('/ecommerce', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404')
 })
-
+console.log('--- 3. ANTES DE APP.LISTEN ---'); // C
 app.listen(port, () => {
-    console.log(`Ejemplo escuchando en http://localhost:${port}`);
+    console.log(`Ejemplo escuchando en http://localhost:${port}`); // D
 })
