@@ -76,6 +76,6 @@ app.get('*', (req, res) => {
     res.render('404')
 })
 console.log('--- 3. ANTES DE APP.LISTEN ---'); // C
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
     console.log(`SERVIDOR ACTIVO en el puerto ${port}`);
 })
