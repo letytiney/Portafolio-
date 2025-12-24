@@ -1,19 +1,17 @@
-console.log('--- 1. INICIANDO APP ---'); // A
-const express = require('express')
-const hbs = require('hbs')
-
+const path = require('path');
+const express = require('express');
+const hbs = require('hbs');
 require('dotenv').config();
+
 
 console.log('--- 2. DESPUÉS DE REQUIRE ---'); // B
 const app = express()
 const port = process.env.PORT || 3000;
-
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-
-hbs.registerPartials(__dirname + '/views/partials');
-
-app.use(express.static('public_html'));
+hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
+app.use(express.static(path.join(__dirname, 'public_html')));
 
 
 app.get('/', (req, res) => {
@@ -75,7 +73,14 @@ app.get('/ecommerce', (req, res) => {
 app.get('*', (req, res) => {
     res.render('404')
 })
+
 console.log('--- 3. ANTES DE APP.LISTEN ---'); // C
-app.listen(port, () => {
+/*app.listen(port, () => {
     console.log(`Servidor en puerto ${port}`);
-});
+});*/
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Servidor en puerto ${port}`);
+    });
+}
+module.exports = app;
