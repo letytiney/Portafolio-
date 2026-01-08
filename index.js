@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
         nombre: 'Sandra Tiney S. ',
         titulo: 'Portafolio | Home',
         profesion: 'Ingenieria en Sistemas',
-        ocupacion: 'Estudiante de Ingenieria'
+        ocupacion: 'Cierre de pensum de Ingenieria'
     })
 })
 app.get('/habilidades', (req, res) => {
